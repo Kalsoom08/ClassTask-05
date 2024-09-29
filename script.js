@@ -32,7 +32,7 @@ if (getCurrentMonth < getBirthMonth) {
     
 
     // Get Days
-    let getCurrentDay = getCurrentDate.getDate(); // Use getDate() for day of the month
+    let getCurrentDay = getCurrentDate.getDate(); 
     let getBirthDay =  birthDate.getDate();
 
     if (getCurrentDay < getBirthDay) {
