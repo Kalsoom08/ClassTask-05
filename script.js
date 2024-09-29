@@ -19,15 +19,21 @@ else {
     //Get Month
 
     let getCurrentMonth = getCurrentDate.getMonth();
-    let getBirthMonth =  birthDate.getFullYear();
+    let getBirthMonth =  birthDate.getMonth();
     let reqMonth = getCurrentMonth - getBirthMonth;
 
     console.log(reqMonth)
 
-    // 
+    // Get Days
+    let getCurrentDay = getCurrentDate.getDay();
+   let getBirthDay =  birthDate.getDay();
+   let reqDay = getCurrentDay - getBirthDay;
+   console.log(reqDay)
 
 }
 });
+
+let yearBlock = document.getElementById("")
 
 
 
