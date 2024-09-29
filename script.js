@@ -14,26 +14,31 @@ else {
     let getBirthYear = birthDate.getFullYear();
 
     let reqYear =  getCurrentYear - getBirthYear;
-    console.log(reqYear)
+    let yearBlock = document.getElementById("years");
+    yearBlock.textContent = reqYear;
    
     //Get Month
 
     let getCurrentMonth = getCurrentDate.getMonth();
     let getBirthMonth =  birthDate.getMonth();
     let reqMonth = getCurrentMonth - getBirthMonth;
-
-    console.log(reqMonth)
+    let monthBlock = document.getElementById("months");
+     monthBlock .textContent = reqMonth;
+    
 
     // Get Days
     let getCurrentDay = getCurrentDate.getDay();
    let getBirthDay =  birthDate.getDay();
    let reqDay = getCurrentDay - getBirthDay;
-   console.log(reqDay)
+
+   let daysBlock = document.getElementById("days");
+    daysBlock.textContent = reqDay;
+   
 
 }
 });
 
-let yearBlock = document.getElementById("")
+
 
 
 
