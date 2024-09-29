@@ -15,33 +15,41 @@ else {
 
     let reqYear =  getCurrentYear - getBirthYear;
     let yearBlock = document.getElementById("years");
-    yearBlock.textContent = reqYear;
+    yearBlock.textContent = `Years ${reqYear}`;
    
     //Get Month
 
     let getCurrentMonth = getCurrentDate.getMonth();
     let getBirthMonth =  birthDate.getMonth();
+
+if (getCurrentMonth < getBirthMonth) {
+  reqYear--;  
+  getCurrentMonth += 12; 
+}
     let reqMonth = getCurrentMonth - getBirthMonth;
     let monthBlock = document.getElementById("months");
-     monthBlock .textContent = reqMonth;
+     monthBlock .textContent = `Months ${reqMonth}`;
     
 
     // Get Days
     let getCurrentDay = getCurrentDate.getDay();
    let getBirthDay =  birthDate.getDay();
+if (getCurrentDay < getBirthDay) {
+  reqMonth--;
+  let daysInPrevMonth = new Date(getCurrentDate.getFullYear(), getCurrentDate.getMonth(), 0).getDate();
+  getCurrentDay += daysInPrevMonth;
+}
+
    let reqDay = getCurrentDay - getBirthDay;
 
+   console.log(getCurrentDay)
+   console.log(getBirthDay)
+
    let daysBlock = document.getElementById("days");
-    daysBlock.textContent = reqDay;
+    daysBlock.textContent = `Days ${reqDay}`;
    
 
 }
 });
-
-
-
-
-
-
 
 
