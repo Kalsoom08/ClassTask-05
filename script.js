@@ -32,24 +32,24 @@ if (getCurrentMonth < getBirthMonth) {
     
 
     // Get Days
-    let getCurrentDay = getCurrentDate.getDay();
-   let getBirthDay =  birthDate.getDay();
-if (getCurrentDay < getBirthDay) {
-  reqMonth--;
-  let daysInPrevMonth = new Date(getCurrentDate.getFullYear(), getCurrentDate.getMonth(), 0).getDate();
-  getCurrentDay += daysInPrevMonth;
-}
+    let getCurrentDay = getCurrentDate.getDate(); // Use getDate() for day of the month
+    let getBirthDay =  birthDate.getDate();
 
-   let reqDay = getCurrentDay - getBirthDay;
+    if (getCurrentDay < getBirthDay) {
+      reqMonth--;
+      if (reqMonth < 0) {
+        reqMonth += 12;
+        reqYear--;
+      }
+    
+      let daysInPrevMonth = new Date(getCurrentDate.getFullYear(), getCurrentDate.getMonth(), 0).getDate();
+      getCurrentDay += daysInPrevMonth;
+    }
 
-   console.log(getCurrentDay)
-   console.log(getBirthDay)
-
-   let daysBlock = document.getElementById("days");
-    daysBlock.textContent = `Days ${reqDay}`;
-   
-
-}
+    let reqDay = getCurrentDay - getBirthDay;
+    let daysBlock = document.getElementById("days");
+    daysBlock.textContent = `Days: ${reqDay}`;
+  }
 });
 
 
