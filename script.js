@@ -17,10 +17,16 @@ else {
     console.log(reqYear)
    
     //Get Month
-    
-   
 
-     }
+    let getCurrentMonth = getCurrentDate.getMonth();
+    let getBirthMonth =  birthDate.getFullYear();
+    let reqMonth = getCurrentMonth - getBirthMonth;
+
+    console.log(reqMonth)
+
+    // 
+
+}
 });
 
 
