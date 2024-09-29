@@ -8,12 +8,23 @@ ageFinder.addEventListener('click',function(event){
 else {
     let getCurrentDate = new Date();
     let birthDate = new Date(dateInput);
-    
-    console.log("Current Date:", getCurrentDate);
-    console.log("Birth Date:", birthDate);
+
+    // Get Year
+    let getCurrentYear = getCurrentDate.getFullYear();
+    let getBirthYear = birthDate.getFullYear();
+
+    let reqYear =  getCurrentYear - getBirthYear;
+    console.log(reqYear)
+   
+    //Get Month
     
    
-  }
+
+     }
 });
+
+
+
+
 
 
